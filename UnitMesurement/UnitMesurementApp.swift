@@ -11,7 +11,10 @@ import SwiftUI
 struct UnitMesurementApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                MenuView()
+                    .navigationTitle("Unit Converter")
+            }
         }
     }
 }
