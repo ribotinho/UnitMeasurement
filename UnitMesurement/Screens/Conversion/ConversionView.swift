@@ -12,9 +12,6 @@ import SwiftUI
 struct ConversionView: View {
     
     @ObservedObject var viewModel : ConversionViewModel
-    @State private var selectedFirstUnit : ConversionUnit.Currency = .euro
-    @State private var selectedSecondUnit : ConversionUnit.Currency = .beer
-    
     
     
     var body: some View {
@@ -22,14 +19,14 @@ struct ConversionView: View {
             Color(.secondarySystemBackground)
                 .ignoresSafeArea()
             
-            VStack {
+            VStack (spacing: 50){
                 HStack {
                     
-                    DropDownView(selectedUnit: $selectedFirstUnit)
+                    DropDownView(selectedUnit: $viewModel.selectedFirstUnit, dictionary: viewModel.unit.getNestedCases())
                     
                     
                     Button {
-                        print("hola")
+                        viewModel.swapValues()
                     } label: {
                         Image("exchange")
                             .resizable()
@@ -37,58 +34,33 @@ struct ConversionView: View {
                             .frame(height:45)
                     }
                     
-                    DropDownView(selectedUnit: $selectedSecondUnit)
+                    DropDownView(selectedUnit: $viewModel.selectedSecondUnit, dictionary: viewModel.unit.getNestedCases())
                     
                 }
                 .padding(.top)
                 .padding(.horizontal)
-                .padding(.bottom, 50)
                 
                 
-                HStack{
-                    
-                    TextField("", text: $viewModel.firstTextFieldValue)
-                        .multilineTextAlignment(.trailing)
-                        .frame(height: 100)
-                        .textFieldStyle(.plain)
-                        .keyboardType(.decimalPad)
-                        
-                    Text("\(selectedFirstUnit.displayName)")
-                        .bold()
-                        .font(.title2)
-                        .padding(.trailing)
+                ConversionTextFieldView(textFieldUnit: $viewModel.firstTextFieldValue, textFieldText: viewModel.selectedFirstUnit)
+                
+                ConversionTextFieldView(textFieldUnit: $viewModel.secondTextFieldValue, textFieldText: viewModel.selectedSecondUnit)
+                
+                if (!viewModel.firstTextFieldValue.isEmpty && !viewModel.secondTextFieldValue.isEmpty) {
+                    Text("\(viewModel.firstTextFieldValue) \(viewModel.selectedFirstUnit) is equal to \(viewModel.secondTextFieldValue) \(viewModel.selectedSecondUnit)")
+                        .font(.system(size: 24, weight: .semibold, design: .rounded))
                 }
-                .overlay(
-                    RoundedRectangle(cornerRadius: 5)
-                        .stroke(Color.black, lineWidth: 1)
-                )
-                .padding(.horizontal)
-                
-                HStack{
-                    
-                    TextField("", text: $viewModel.secondTextFieldValue)
-                        .multilineTextAlignment(.trailing)
-                        .frame(height: 100)
-                        .textFieldStyle(.plain)
-                        .keyboardType(.decimalPad)
-                        
-                    Text("\(selectedSecondUnit.displayName)")
-                        .bold()
-                        .font(.title2)
-                        .padding(.horizontal)
-                        
-                }
-                .overlay(
-                    RoundedRectangle(cornerRadius: 5)
-                        .stroke(Color.black, lineWidth: 1)
-                )
-                .padding(.horizontal)
                 
                 Spacer()
             }
             .ignoresSafeArea(.keyboard, edges: .bottom)
         }
         .navigationTitle(viewModel.unit.name)
+        .onAppear{
+            viewModel.setup()
+        }
+        .onDisappear{
+            viewModel.reset()
+        }
     }
     
 }
@@ -97,8 +69,8 @@ struct ConversionView: View {
 struct ConversionView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ConversionView(viewModel: ConversionViewModel(unit: ConversionUnit.temperature(type: .degree)))
-            ConversionView(viewModel: ConversionViewModel(unit: ConversionUnit.temperature(type: .degree)))
+            ConversionView(viewModel: ConversionViewModel(unit: ConversionUnit.temperature))
+            ConversionView(viewModel: ConversionViewModel(unit: ConversionUnit.temperature))
                 .preferredColorScheme(.dark)
         }
     }

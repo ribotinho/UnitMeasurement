@@ -9,7 +9,9 @@ import SwiftUI
 
 struct DropDownView: View {
     
-    @Binding var selectedUnit : ConversionUnit.Currency
+    @Binding var selectedUnit : String
+    var dictionary : [String : Double]
+    
     
     var body: some View {
         HStack{
@@ -23,8 +25,8 @@ struct DropDownView: View {
                 
                 HStack{
                     Picker("Strength", selection: $selectedUnit) {
-                        ForEach(ConversionUnit.Currency.allCases, id: \.self) {
-                            Text($0.displayName).tag($0)
+                        ForEach(dictionary.sorted(by: >), id: \.key) { key, value in
+                            Text("\(key)").tag(key)
                                 .foregroundColor(.black)
                                 .border(Color.red)
                         }
@@ -32,7 +34,7 @@ struct DropDownView: View {
                     .labelsHidden()
                     .frame(maxWidth: 75)
                     .onChange(of: selectedUnit) { newValue in
-                        print(newValue.displayName)
+                        print(newValue)
                     }
                     
                     Spacer()

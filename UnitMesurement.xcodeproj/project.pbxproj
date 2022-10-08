@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F573FB328F090DF00A3D04A /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F573FB228F090DF00A3D04A /* Currency.swift */; };
+		5F573FB528F0910800A3D04A /* Speed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F573FB428F0910800A3D04A /* Speed.swift */; };
+		5F573FB728F0912900A3D04A /* Metric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F573FB628F0912900A3D04A /* Metric.swift */; };
+		5F573FB928F0913700A3D04A /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F573FB828F0913700A3D04A /* Temperature.swift */; };
+		5F573FBB28F0914300A3D04A /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F573FBA28F0914300A3D04A /* Time.swift */; };
+		5F573FBD28F0914F00A3D04A /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F573FBC28F0914F00A3D04A /* Weight.swift */; };
+		5F573FC028F0977900A3D04A /* Dictionarable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F573FBF28F0977900A3D04A /* Dictionarable.swift */; };
 		5FA1199028E73F5100E2F4FA /* UnitMesurementApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA1198F28E73F5100E2F4FA /* UnitMesurementApp.swift */; };
 		5FA1199428E73F5300E2F4FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FA1199328E73F5300E2F4FA /* Assets.xcassets */; };
 		5FA1199728E73F5300E2F4FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FA1199628E73F5300E2F4FA /* Preview Assets.xcassets */; };
@@ -16,9 +23,17 @@
 		5FA119AE28E75D2A00E2F4FA /* ConversionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA119AD28E75D2A00E2F4FA /* ConversionView.swift */; };
 		5FA119B428E76D3800E2F4FA /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA119B328E76D3800E2F4FA /* DropDownView.swift */; };
 		5FF19A4628F074C600E91938 /* ConversionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF19A4528F074C600E91938 /* ConversionViewModel.swift */; };
+		5FFF170628F187490061262D /* ConversionTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFF170528F187490061262D /* ConversionTextFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F573FB228F090DF00A3D04A /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		5F573FB428F0910800A3D04A /* Speed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speed.swift; sourceTree = "<group>"; };
+		5F573FB628F0912900A3D04A /* Metric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metric.swift; sourceTree = "<group>"; };
+		5F573FB828F0913700A3D04A /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		5F573FBA28F0914300A3D04A /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		5F573FBC28F0914F00A3D04A /* Weight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
+		5F573FBF28F0977900A3D04A /* Dictionarable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionarable.swift; sourceTree = "<group>"; };
 		5FA1198C28E73F5100E2F4FA /* UnitMesurement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitMesurement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FA1198F28E73F5100E2F4FA /* UnitMesurementApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitMesurementApp.swift; sourceTree = "<group>"; };
 		5FA1199328E73F5300E2F4FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -29,6 +44,7 @@
 		5FA119AD28E75D2A00E2F4FA /* ConversionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionView.swift; sourceTree = "<group>"; };
 		5FA119B328E76D3800E2F4FA /* DropDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
 		5FF19A4528F074C600E91938 /* ConversionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewModel.swift; sourceTree = "<group>"; };
+		5FFF170528F187490061262D /* ConversionTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionTextFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F573FBE28F0976500A3D04A /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				5F573FBF28F0977900A3D04A /* Dictionarable.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		5FA1198328E73F5100E2F4FA = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +88,7 @@
 				5FA1198F28E73F5100E2F4FA /* UnitMesurementApp.swift */,
 				5FA1199328E73F5300E2F4FA /* Assets.xcassets */,
 				5FA1199528E73F5300E2F4FA /* Preview Content */,
+				5F573FBE28F0976500A3D04A /* Support */,
 				5FA119A628E741BA00E2F4FA /* Views */,
 				5FA119A028E73F7F00E2F4FA /* Model */,
 				5FA1199D28E73F6400E2F4FA /* Screens */,
@@ -92,6 +117,12 @@
 			isa = PBXGroup;
 			children = (
 				5FA119A128E73F8E00E2F4FA /* ConversionUnit.swift */,
+				5F573FB228F090DF00A3D04A /* Currency.swift */,
+				5F573FB428F0910800A3D04A /* Speed.swift */,
+				5F573FB628F0912900A3D04A /* Metric.swift */,
+				5F573FB828F0913700A3D04A /* Temperature.swift */,
+				5F573FBA28F0914300A3D04A /* Time.swift */,
+				5F573FBC28F0914F00A3D04A /* Weight.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -101,6 +132,7 @@
 			children = (
 				5FA119A728E741C700E2F4FA /* MenuItemView.swift */,
 				5FA119B328E76D3800E2F4FA /* DropDownView.swift */,
+				5FFF170528F187490061262D /* ConversionTextFieldView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,11 +224,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F573FBB28F0914300A3D04A /* Time.swift in Sources */,
+				5F573FB328F090DF00A3D04A /* Currency.swift in Sources */,
 				5FF19A4628F074C600E91938 /* ConversionViewModel.swift in Sources */,
 				5FA119AE28E75D2A00E2F4FA /* ConversionView.swift in Sources */,
+				5FFF170628F187490061262D /* ConversionTextFieldView.swift in Sources */,
+				5F573FB528F0910800A3D04A /* Speed.swift in Sources */,
+				5F573FC028F0977900A3D04A /* Dictionarable.swift in Sources */,
 				5FA119A228E73F8E00E2F4FA /* ConversionUnit.swift in Sources */,
 				5FA1199028E73F5100E2F4FA /* UnitMesurementApp.swift in Sources */,
+				5F573FBD28F0914F00A3D04A /* Weight.swift in Sources */,
+				5F573FB928F0913700A3D04A /* Temperature.swift in Sources */,
 				5FA119B428E76D3800E2F4FA /* DropDownView.swift in Sources */,
+				5F573FB728F0912900A3D04A /* Metric.swift in Sources */,
 				5FA1199F28E73F7000E2F4FA /* MenuView.swift in Sources */,
 				5FA119A828E741C700E2F4FA /* MenuItemView.swift in Sources */,
 			);
@@ -344,7 +384,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -373,7 +413,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

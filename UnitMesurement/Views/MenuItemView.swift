@@ -14,7 +14,7 @@ struct MenuItemView: View {
     var body: some View {
         ZStack {
             Color(.white)
-                .frame(width: 175, height: 175)
+                .frame(height: 175)
                 .cornerRadius(10)
                 .shadow(radius: 5)
             
@@ -27,13 +27,12 @@ struct MenuItemView: View {
                     .bold()
                     .font(.title)
             }
-            
         }
     }
 }
 
 struct MenuItemView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuItemView(title: "Scale")
+        MenuItemView(title: "Weight")
     }
 }
