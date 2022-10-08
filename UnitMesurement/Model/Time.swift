@@ -8,7 +8,7 @@
 import Foundation
 
 enum Time : Double, CaseIterable, Dictionarable{
-    case hours = 1.0
+    case hours = 1
     case minutes = 60
     case seconds = 3600
     case hearbeat = 3500

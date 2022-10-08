@@ -19,7 +19,7 @@ struct ConversionView: View {
             Color(.secondarySystemBackground)
                 .ignoresSafeArea()
             
-            VStack (spacing: 50){
+            VStack (spacing: 25){
                 HStack {
                     
                     DropDownView(selectedUnit: $viewModel.selectedFirstUnit, dictionary: viewModel.unit.getNestedCases())
@@ -43,12 +43,18 @@ struct ConversionView: View {
                 
                 ConversionTextFieldView(textFieldUnit: $viewModel.firstTextFieldValue, textFieldText: viewModel.selectedFirstUnit)
                 
+                Button {
+                    viewModel.calculate(textfield: "first")
+                } label: {
+                    Image("exchange")
+                        .resizable()
+                        .scaledToFit()
+                        .rotationEffect(Angle(degrees: 90))
+                        .frame(height:45)
+                }
+                
                 ConversionTextFieldView(textFieldUnit: $viewModel.secondTextFieldValue, textFieldText: viewModel.selectedSecondUnit)
                 
-                if (!viewModel.firstTextFieldValue.isEmpty && !viewModel.secondTextFieldValue.isEmpty) {
-                    Text("\(viewModel.firstTextFieldValue) \(viewModel.selectedFirstUnit) is equal to \(viewModel.secondTextFieldValue) \(viewModel.selectedSecondUnit)")
-                        .font(.system(size: 24, weight: .semibold, design: .rounded))
-                }
                 
                 Spacer()
             }

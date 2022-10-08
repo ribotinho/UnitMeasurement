@@ -8,8 +8,8 @@
 import Foundation
 
 enum Weight : Double, CaseIterable, Dictionarable{
-    case gram = 1000
-    case kilogram = 1
+    case gram = 1
+    case kilogram = 1000
     case bee = 9.091
     case bigMac = 4.5
     case cat = 0.22

@@ -4,8 +4,6 @@ import UIKit
 
 enum ConversionUnit : CaseIterable, Hashable {
     
-    
-    
     case metric
     case currency
     case weight
@@ -55,7 +53,7 @@ enum ConversionUnit : CaseIterable, Hashable {
         case .currency:
             return "Euro €"
         case .weight:
-            return "kilograms"
+            return "grams"
         case .speed:
             return "km/h"
         case .time:

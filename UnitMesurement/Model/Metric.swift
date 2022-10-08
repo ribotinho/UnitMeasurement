@@ -36,7 +36,7 @@ enum Metric : Double, CaseIterable, Dictionarable {
         case .titanic:
             return "⛴ titanics"
         case .footballField:
-            return "🏟 football fields"
+            return "🏟 fields"
         }
     }
     

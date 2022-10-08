@@ -36,7 +36,7 @@ enum Speed : Double, CaseIterable, Dictionarable{
         case .f1:
             return "🏎 f1 car"
         case .light:
-            return "💡 light speed"
+            return "💡 speed"
         case .usain:
             return "🏃🏿 Usain Bolt"
         }

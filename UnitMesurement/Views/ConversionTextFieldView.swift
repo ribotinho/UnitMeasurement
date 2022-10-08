@@ -20,7 +20,8 @@ struct ConversionTextFieldView: View {
                 .multilineTextAlignment(.center)
                 .frame(height: 100)
                 .textFieldStyle(.plain)
-                .keyboardType(.decimalPad)
+                .submitLabel(.go)
+                
             
             Text(textFieldText)
                 .bold()

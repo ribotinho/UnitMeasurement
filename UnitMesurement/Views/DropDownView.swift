@@ -27,15 +27,11 @@ struct DropDownView: View {
                     Picker("Strength", selection: $selectedUnit) {
                         ForEach(dictionary.sorted(by: >), id: \.key) { key, value in
                             Text("\(key)").tag(key)
-                                .foregroundColor(.black)
-                                .border(Color.red)
                         }
                     }
+                    .accentColor(.black)
                     .labelsHidden()
                     .frame(maxWidth: 75)
-                    .onChange(of: selectedUnit) { newValue in
-                        print(newValue)
-                    }
                     
                     Spacer()
                     

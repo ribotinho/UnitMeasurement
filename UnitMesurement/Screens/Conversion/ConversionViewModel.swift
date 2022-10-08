@@ -11,14 +11,8 @@ class ConversionViewModel : ObservableObject {
     
     var unit : ConversionUnit
     
-    @Published var firstTextFieldValue : String = "" {
-        didSet { calculate(textfield: "first") }
-    }
-    
-    @Published var secondTextFieldValue : String = "" {
-        didSet { calculate(textfield: "second") }
-    }
-    
+    @Published var firstTextFieldValue : String = ""
+    @Published var secondTextFieldValue : String = ""
     @Published var selectedFirstUnit : String = ""
     @Published var selectedSecondUnit : String = ""
     
@@ -32,9 +26,9 @@ class ConversionViewModel : ObservableObject {
         selectedFirstUnit = selectedSecondUnit
         selectedSecondUnit = tempString
         
-        let temp = firstTextFieldValue
+        let tempValue = firstTextFieldValue
         firstTextFieldValue = secondTextFieldValue
-        secondTextFieldValue = temp
+        secondTextFieldValue = tempValue
     }
     
     func reset(){
@@ -51,30 +45,28 @@ class ConversionViewModel : ObservableObject {
     func calculate(textfield : String) {
         
         let dictionary = unit.getNestedCases()
-        
         guard let firstUnitValue = dictionary[selectedFirstUnit], let secondUnitValue = dictionary[selectedSecondUnit] else { return }
-        
-        
-        
         
         if textfield == "first" {
             if let firstValue = Double(firstTextFieldValue) {
                 if selectedFirstUnit == unit.base {
-                    secondTextFieldValue = String(firstValue * secondUnitValue)
+                    secondTextFieldValue = String(format: "%.2f", firstValue * secondUnitValue)
                 }else if selectedSecondUnit == unit.base {
-                    secondTextFieldValue = String(firstValue / secondUnitValue)
+                    secondTextFieldValue = String(format: "%.2f", firstValue / firstUnitValue)
                 }else{
-                    
+                    let temp = firstValue / firstUnitValue
+                    secondTextFieldValue = String(format: "%.2f", temp * secondUnitValue)
                 }
             }
         }else {
             if let secondValue = Double(secondTextFieldValue) {
                 if selectedSecondUnit == unit.base {
-                    firstTextFieldValue = String(secondValue * firstUnitValue)
+                    firstTextFieldValue = String(format: "%.2f", secondValue * firstUnitValue)
                 }else if selectedFirstUnit == unit.base {
-                    
+                    firstTextFieldValue = String(format: "%.2f", secondValue / secondUnitValue)
                 }else{
-                    
+                    let temp = secondValue / secondUnitValue
+                    secondTextFieldValue = String(format: "%.2f", temp * firstUnitValue)
                 }
             }
         }
