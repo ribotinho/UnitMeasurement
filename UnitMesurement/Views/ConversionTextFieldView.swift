@@ -21,7 +21,7 @@ struct ConversionTextFieldView: View {
                 .multilineTextAlignment(.center)
                 .frame(height: 100)
                 .textFieldStyle(.plain)
-                .submitLabel(.go)
+                .submitLabel(.go)                
                 .disabled(isDisabled)
                 
             

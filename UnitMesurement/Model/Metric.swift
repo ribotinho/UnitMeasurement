@@ -13,6 +13,12 @@ enum Metric : Double, CaseIterable, Dictionarable {
     case baguette = 1.54
     case titanic = 0.037
     case footballField = 0.0091
+    case decimetres = 0.1
+    case centimetres = 0.01
+    case milimetres = 0.001
+    case inches = 39.3701
+    case feet = 3.28084
+    case chocobar = 7.3
     
     static func toDictionary() -> [String : Double] {
         
@@ -37,9 +43,25 @@ enum Metric : Double, CaseIterable, Dictionarable {
             return "⛴ titanics"
         case .footballField:
             return "🏟 fields"
+        case .decimetres:
+            return "decimetres"
+        case .centimetres:
+            return "centimetres"
+        case .milimetres:
+            return "milimetres"
+        case .inches:
+            return "inches"
+        case .feet:
+            return "feet"
+        case .chocobar:
+            return "🍫 chocobar"
         }
     }
     
+    static func isBase(name : String) -> Bool {
+        return name == "metres" || name == "kilometres" || name == "decimetres" || name == "centimetres" || name == "milimetres" || name == "feet" || name == "inches"
+        
+    }
 }
 
 

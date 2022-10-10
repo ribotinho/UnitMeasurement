@@ -46,20 +46,20 @@ enum ConversionUnit : CaseIterable, Hashable {
         }
     }
     
-    var base : String {
+    func base(name : String) -> Bool {
         switch self {
         case .metric:
-            return "metres"
+            return Metric.isBase(name: name)
         case .currency:
-            return "Euro €"
+            return Currency.isBase(name: name)
         case .weight:
-            return "grams"
+            return Weight.isBase(name: name)
         case .speed:
-            return "km/h"
+            return Speed.isBase(name: name)
         case .time:
-            return "hours"
+            return Time.isBase(name: name)
         case .temperature:
-            return "Celsius"
+            return Temperature.isBase(name: name)
         }
     }
     

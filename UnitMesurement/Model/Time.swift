@@ -13,6 +13,8 @@ enum Time : Double, CaseIterable, Dictionarable{
     case seconds = 3600
     case hearbeat = 3500
     case pluto = 0.00000046
+    case despacito = 16
+    case soccer = 0.75
     
     static func toDictionary() -> [String : Double] {
         
@@ -35,10 +37,19 @@ enum Time : Double, CaseIterable, Dictionarable{
         case .seconds:
             return "seconds"
         case .hearbeat:
-            return "💓 heartbeats"
+            return "💓 heartbeat"
         case .pluto:
             return "🪐 pluto"
+        case .despacito:
+            return "🎹 Despacito"
+        case .soccer:
+            return "⚽️ game"
         }
+    }
+    
+    static func isBase(name : String) -> Bool {
+        return name == "seconds" || name == "hours" || name == "minutes"
+        
     }
 }
 

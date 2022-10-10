@@ -22,19 +22,15 @@ struct ConversionView: View {
             VStack (spacing: 25){
                 HStack {
                     
-                    DropDownView(selectedUnit: $viewModel.selectedFirstUnit, dictionary: viewModel.unit.getNestedCases())
+                    DropDownView(viewModel: viewModel, selectedUnit: $viewModel.selectedFirstUnit, dictionary: viewModel.unit.getNestedCases(), style: .base)
+                    
+                    Image("exchange")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height:45)
                     
                     
-                    Button {
-                        viewModel.swapValues()
-                    } label: {
-                        Image("exchange")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height:45)
-                    }
-                    
-                    DropDownView(selectedUnit: $viewModel.selectedSecondUnit, dictionary: viewModel.unit.getNestedCases())
+                    DropDownView(viewModel: viewModel, selectedUnit: $viewModel.selectedSecondUnit, dictionary: viewModel.unit.getNestedCases(), style: .weird)
                     
                 }
                 .padding(.top)
@@ -42,16 +38,6 @@ struct ConversionView: View {
                 
                 
                 ConversionTextFieldView(textFieldUnit: $viewModel.firstTextFieldValue, textFieldText: viewModel.selectedFirstUnit, isDisabled: false)
-                
-                Button {
-                    viewModel.calculate(textfield: "first")
-                } label: {
-                    Image("exchange")
-                        .resizable()
-                        .scaledToFit()
-                        .rotationEffect(Angle(degrees: 90))
-                        .frame(height:45)
-                }
                 
                 ConversionTextFieldView(textFieldUnit: $viewModel.secondTextFieldValue, textFieldText: viewModel.selectedSecondUnit, isDisabled: true)
                 

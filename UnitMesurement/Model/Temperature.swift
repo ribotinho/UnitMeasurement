@@ -13,6 +13,8 @@ enum Temperature : Double, CaseIterable, Dictionarable {
     case hotTub = 0.88
     case lava = 0.183
     case sauna = 0.78
+    case farenheit = 33.8
+    case sun = 0.047
     
     static func toDictionary() -> [String : Double] {
         
@@ -38,7 +40,16 @@ enum Temperature : Double, CaseIterable, Dictionarable {
             return "🔥 lava"
         case .sauna:
             return "🧖‍♀️ sauna"
+        case .farenheit:
+            return "Farenheit"
+        case .sun:
+            return "☀️ surface"
         }
+    }
+    
+    static func isBase(name : String) -> Bool {
+        return name == "Celsius" || name == "Farenheit"
+        
     }
 }
 

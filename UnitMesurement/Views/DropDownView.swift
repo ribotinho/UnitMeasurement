@@ -7,39 +7,48 @@
 
 import SwiftUI
 
+enum DropDownStyle {
+    case base, weird
+}
+
 struct DropDownView: View {
     
+    @ObservedObject var viewModel : ConversionViewModel
     @Binding var selectedUnit : String
     var dictionary : [String : Double]
-    
+    var style : DropDownStyle
     
     var body: some View {
-        HStack{
+        ZStack (alignment: .trailing) {
+            Color(.white)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 5)
+                        .stroke(Color.black, lineWidth: 1)
+                )
             
-            ZStack {
-                Color(.white)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 5)
-                            .stroke(Color.black, lineWidth: 1)
-                    )
-                
-                HStack{
-                    Picker("Strength", selection: $selectedUnit) {
-                        ForEach(dictionary.sorted(by: >), id: \.key) { key, value in
-                            Text("\(key)").tag(key)
-                        }
+            Picker("Strength", selection: $selectedUnit) {
+                ForEach(dictionary.sorted(by: >), id: \.key) { key, value in
+                    switch style {
+                    case .base:
+                        if viewModel.unit.base(name: key) { Text("\(key)").tag(key) }
+                    case .weird:
+                        if !viewModel.unit.base(name: key) { Text("\(key)").tag(key) }
                     }
-                    .accentColor(.black)
-                    .labelsHidden()
-                    .frame(maxWidth: 75)
                     
-                    Spacer()
-                    
-                    Image(systemName: "chevron.down")
                 }
-                .padding([.leading, .trailing])
+            }
+            .accentColor(.black)
+            .onChange(of: selectedUnit) { _ in
+                viewModel.calculate()
             }
         }
         .frame(height: 45)
+
+    }
+}
+
+struct DropDownView_Previews: PreviewProvider {
+    static var previews: some View {
+        DropDownView(viewModel: ConversionViewModel(unit: .temperature), selectedUnit: .constant("Weight"), dictionary: Currency.toDictionary(), style: .base)
     }
 }
