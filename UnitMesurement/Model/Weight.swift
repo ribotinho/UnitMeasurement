@@ -16,17 +16,6 @@ enum Weight : Double, CaseIterable, Dictionarable{
     case cat = 0.22
     case bear = 0.0000022
     
-    static func toDictionary() -> [String : Double] {
-        
-        var dictionary : [String : Double] = [:]
-        
-        for item in Weight.allCases {
-            dictionary["\(item.displayName)"] = item.rawValue
-        }
-        
-        return dictionary
-    }
-    
     var displayName : String {
         switch self{
             
@@ -49,6 +38,17 @@ enum Weight : Double, CaseIterable, Dictionarable{
     
     static func isBase(name : String) -> Bool {
         return name == "grams" || name == "kilograms" || name == "lbs"
+    }
+    
+    static func toDictionary() -> [String : Double] {
+        
+        var dictionary : [String : Double] = [:]
+        
+        for item in Weight.allCases {
+            dictionary["\(item.displayName)"] = item.rawValue
+        }
+        
+        return dictionary
     }
 }
 

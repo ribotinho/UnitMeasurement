@@ -49,14 +49,11 @@ class ConversionViewModel : ObservableObject {
         
         
         if let firstValue = Double(firstTextFieldValue) {
-            
             let temp = firstValue / firstUnitValue
             let result = temp * secondUnitValue
             secondTextFieldValue = result > 1 ? String(format: "%.2f", result) : String(format: "%.4f", result)
-            
         }else{
             secondTextFieldValue = ""
         }
-        
     }
 }

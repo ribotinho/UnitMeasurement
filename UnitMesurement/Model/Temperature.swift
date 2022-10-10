@@ -16,17 +16,6 @@ enum Temperature : Double, CaseIterable, Dictionarable {
     case farenheit = 33.8
     case sun = 0.047
     
-    static func toDictionary() -> [String : Double] {
-        
-        var dictionary : [String : Double] = [:]
-        
-        for item in Temperature.allCases {
-            dictionary["\(item.displayName)"] = item.rawValue
-        }
-        
-        return dictionary
-    }
-    
     var displayName : String {
         switch self{
             
@@ -49,7 +38,17 @@ enum Temperature : Double, CaseIterable, Dictionarable {
     
     static func isBase(name : String) -> Bool {
         return name == "Celsius" || name == "Farenheit"
+    }
+    
+    static func toDictionary() -> [String : Double] {
         
+        var dictionary : [String : Double] = [:]
+        
+        for item in Temperature.allCases {
+            dictionary["\(item.displayName)"] = item.rawValue
+        }
+        
+        return dictionary
     }
 }
 

@@ -20,17 +20,6 @@ enum Metric : Double, CaseIterable, Dictionarable {
     case feet = 3.28084
     case chocobar = 7.3
     
-    static func toDictionary() -> [String : Double] {
-        
-        var dictionary : [String : Double] = [:]
-        
-        for item in Metric.allCases {
-            dictionary["\(item.displayName)"] = item.rawValue
-        }
-        
-        return dictionary
-    }
-    
     var displayName : String {
         switch self{
         case .metres:
@@ -60,7 +49,17 @@ enum Metric : Double, CaseIterable, Dictionarable {
     
     static func isBase(name : String) -> Bool {
         return name == "metres" || name == "kilometres" || name == "decimetres" || name == "centimetres" || name == "milimetres" || name == "feet" || name == "inches"
+    }
+    
+    static func toDictionary() -> [String : Double] {
         
+        var dictionary : [String : Double] = [:]
+        
+        for item in Metric.allCases {
+            dictionary["\(item.displayName)"] = item.rawValue
+        }
+        
+        return dictionary
     }
 }
 

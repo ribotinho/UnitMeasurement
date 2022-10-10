@@ -16,17 +16,6 @@ enum Time : Double, CaseIterable, Dictionarable{
     case despacito = 16
     case soccer = 0.75
     
-    static func toDictionary() -> [String : Double] {
-        
-        var dictionary : [String : Double] = [:]
-        
-        for item in Time.allCases {
-            dictionary["\(item.displayName)"] = item.rawValue
-        }
-        
-        return dictionary
-    }
-    
     var displayName : String {
         switch self{
             
@@ -50,6 +39,17 @@ enum Time : Double, CaseIterable, Dictionarable{
     static func isBase(name : String) -> Bool {
         return name == "seconds" || name == "hours" || name == "minutes"
         
+    }
+    
+    static func toDictionary() -> [String : Double] {
+        
+        var dictionary : [String : Double] = [:]
+        
+        for item in Time.allCases {
+            dictionary["\(item.displayName)"] = item.rawValue
+        }
+        
+        return dictionary
     }
 }
 

@@ -52,7 +52,6 @@ enum Speed : Double, CaseIterable, Dictionarable{
     
     static func isBase(name : String) -> Bool {
         return name == "km/h" || name == "mp/h"
-        
     }
 }
 
