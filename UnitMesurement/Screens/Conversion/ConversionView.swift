@@ -41,7 +41,7 @@ struct ConversionView: View {
                 .padding(.horizontal)
                 
                 
-                ConversionTextFieldView(textFieldUnit: $viewModel.firstTextFieldValue, textFieldText: viewModel.selectedFirstUnit)
+                ConversionTextFieldView(textFieldUnit: $viewModel.firstTextFieldValue, textFieldText: viewModel.selectedFirstUnit, isDisabled: false)
                 
                 Button {
                     viewModel.calculate(textfield: "first")
@@ -53,7 +53,7 @@ struct ConversionView: View {
                         .frame(height:45)
                 }
                 
-                ConversionTextFieldView(textFieldUnit: $viewModel.secondTextFieldValue, textFieldText: viewModel.selectedSecondUnit)
+                ConversionTextFieldView(textFieldUnit: $viewModel.secondTextFieldValue, textFieldText: viewModel.selectedSecondUnit, isDisabled: true)
                 
                 
                 Spacer()

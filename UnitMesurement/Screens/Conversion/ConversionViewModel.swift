@@ -13,8 +13,16 @@ class ConversionViewModel : ObservableObject {
     
     @Published var firstTextFieldValue : String = ""
     @Published var secondTextFieldValue : String = ""
-    @Published var selectedFirstUnit : String = ""
-    @Published var selectedSecondUnit : String = ""
+    @Published var selectedFirstUnit : String = "" {
+        didSet {
+            calculate(textfield: "first")
+        }
+    }
+    @Published var selectedSecondUnit : String = "" {
+        didSet {
+            calculate(textfield: "second")
+        }
+    }
     
     
     init(unit : ConversionUnit){

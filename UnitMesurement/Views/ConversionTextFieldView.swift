@@ -11,6 +11,7 @@ struct ConversionTextFieldView: View {
     
     @Binding var textFieldUnit : String
     var textFieldText : String
+    var isDisabled : Bool
     
     var body: some View {
         HStack{
@@ -21,6 +22,7 @@ struct ConversionTextFieldView: View {
                 .frame(height: 100)
                 .textFieldStyle(.plain)
                 .submitLabel(.go)
+                .disabled(isDisabled)
                 
             
             Text(textFieldText)
@@ -38,6 +40,6 @@ struct ConversionTextFieldView: View {
 
 struct ConversionTextFieldView_Previews: PreviewProvider {
     static var previews: some View {
-        ConversionTextFieldView(textFieldUnit: .constant(""), textFieldText: "Kilometres")
+        ConversionTextFieldView(textFieldUnit: .constant(""), textFieldText: "Kilometres", isDisabled: false)
     }
 }

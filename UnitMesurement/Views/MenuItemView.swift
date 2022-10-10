@@ -26,6 +26,7 @@ struct MenuItemView: View {
                 Text(title)
                     .bold()
                     .font(.title)
+                    .foregroundColor(.pink)
             }
         }
     }
