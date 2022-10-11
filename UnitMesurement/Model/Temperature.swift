@@ -20,24 +20,24 @@ enum Temperature : Double, CaseIterable, Dictionarable {
         switch self{
             
         case .degree:
-            return "Celsius"
+            return "temperature.celsius"
         case .icecream:
-            return "🍦 icecream"
+            return "temperature.icecream"
         case .hotTub:
-            return "🛁 jacuzzi"
+            return "temperature.jacuzzi"
         case .lava:
-            return "🔥 lava"
+            return "temperature.lava"
         case .sauna:
-            return "🧖‍♀️ sauna"
+            return "temperature.sauna"
         case .farenheit:
-            return "Farenheit"
+            return "temperature.farenheit"
         case .sun:
-            return "☀️ surface"
+            return "temperature.sun"
         }
     }
     
     static func isBase(name : String) -> Bool {
-        return name == "Celsius" || name == "Farenheit"
+        return name == "temperature.celsius" || name == "temperature.farenheit"
     }
     
     static func toDictionary() -> [String : Double] {

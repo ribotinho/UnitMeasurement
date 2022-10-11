@@ -20,24 +20,24 @@ enum Time : Double, CaseIterable, Dictionarable{
         switch self{
             
         case .hours:
-            return "hours"
+            return "time.hours"
         case .minutes:
-            return "minutes"
+            return "time.minutes"
         case .seconds:
-            return "seconds"
+            return "time.seconds"
         case .hearbeat:
-            return "💓 heartbeat"
+            return "time.heartbeat"
         case .pluto:
-            return "🪐 pluto"
+            return "time.pluto"
         case .despacito:
-            return "🎹 Despacito"
+            return "time.despacito"
         case .soccer:
-            return "⚽️ game"
+            return "time.soccer"
         }
     }
     
     static func isBase(name : String) -> Bool {
-        return name == "seconds" || name == "hours" || name == "minutes"
+        return name == "time.seconds" || name == "time.hours" || name == "time.minutes"
         
     }
     

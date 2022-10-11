@@ -23,32 +23,32 @@ enum Metric : Double, CaseIterable, Dictionarable {
     var displayName : String {
         switch self{
         case .metres:
-            return "metres"
+            return "metric.metres"
         case .kilometres:
-            return "kilometres"
+            return "metric.kilometres"
         case .baguette:
-            return "🥖 baguettes"
+            return "metric.baguette"
         case .titanic:
-            return "⛴ titanics"
+            return "metric.titanic"
         case .footballField:
-            return "🏟 fields"
+            return "metric.field"
         case .decimetres:
-            return "decimetres"
+            return "metric.decimetres"
         case .centimetres:
-            return "centimetres"
+            return "metric.centimetres"
         case .milimetres:
-            return "milimetres"
+            return "metric.milimetres"
         case .inches:
-            return "inches"
+            return "metric.inches"
         case .feet:
-            return "feet"
+            return "metric.feet"
         case .chocobar:
-            return "🍫 chocobar"
+            return "metric.chocobar"
         }
     }
     
     static func isBase(name : String) -> Bool {
-        return name == "metres" || name == "kilometres" || name == "decimetres" || name == "centimetres" || name == "milimetres" || name == "feet" || name == "inches"
+        return name == "metric.metres" || name == "metric.kilometres" || name == "metric.decimetres" || name == "metric.centimetres" || name == "metric.milimetres" || name == "metric.feet" || name == "metric.inches"
     }
     
     static func toDictionary() -> [String : Double] {

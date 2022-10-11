@@ -25,14 +25,14 @@ struct ConversionTextFieldView: View {
                 .disabled(isDisabled)
                 
             
-            Text(textFieldText)
+            Text(textFieldText.localizedKey())
                 .bold()
                 .font(.title2)
                 .padding(.trailing)
         }
         .overlay(
             RoundedRectangle(cornerRadius: 5)
-                .stroke(Color.black, lineWidth: 1)
+                .stroke(Colors.brandPrimary, lineWidth: 1)
         )
         .padding(.horizontal)
     }

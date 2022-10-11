@@ -12,20 +12,37 @@ enum ConversionUnit : CaseIterable, Hashable {
     case temperature
     
     
-    var name : String {
+    var imageName : String {
         switch self {
          case .metric:
-            return "Metric"
+            return Images.metric
         case .currency:
-            return "Currency"
+            return Images.currency
         case .weight:
-            return "Weight"
+            return Images.weight
         case .speed:
-            return "Speed"
+            return Images.speed
         case .time:
-            return "Time"
+            return Images.time
         case .temperature:
-            return "Temperature"
+            return Images.temperature
+        }
+    }
+    
+    var title : String {
+        switch self {
+         case .metric:
+            return "unit.metric"
+        case .currency:
+            return "unit.currency"
+        case .weight:
+            return "unit.weight"
+        case .speed:
+            return "unit.speed"
+        case .time:
+            return "unit.time"
+        case .temperature:
+            return "unit.temperature"
         }
     }
     

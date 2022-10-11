@@ -21,21 +21,21 @@ enum Speed : Double, CaseIterable, Dictionarable{
     var displayName : String {
         switch self{
         case .kmh:
-            return "km/h"
+            return "speed.kmh"
         case .phelphs:
-            return "🏊‍♀️ Phelps"
+            return "speed.phelps"
         case .f1:
-            return "🏎 f1 car"
+            return "speed.f1"
         case .light:
-            return "💡 speed"
+            return "speed.light"
         case .usain:
-            return "🏃🏿 Usain Bolt"
+            return "speed.usain"
         case .mph:
-            return "mp/h"
+            return "speed.mph"
         case .cheetah:
-            return "🐅 cheetah"
+            return "speed.cheetah"
         case .bullet:
-            return "🔫 bullet"
+            return "speed.bullet"
         }
     }
     
@@ -51,7 +51,7 @@ enum Speed : Double, CaseIterable, Dictionarable{
     }
     
     static func isBase(name : String) -> Bool {
-        return name == "km/h" || name == "mp/h"
+        return name == "speed.kmh" || name == "speed.mph"
     }
 }
 

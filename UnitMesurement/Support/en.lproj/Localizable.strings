@@ -1,0 +1,84 @@
+/* 
+  Localizable.strings
+  UnitMesurement
+
+  Created by Pau Ribot Pujolras on 11/10/22.
+  
+*/
+
+//Main menu
+
+"menu.title" = "Unit conversion";
+
+//App main units
+
+"unit.metric" = "Metric";
+"unit.currency" = "Currency";
+"unit.weight" = "Weight";
+"unit.speed" = "Speed";
+"unit.time" = "Time";
+"unit.temperature" = "Temperature";
+
+//Currency
+
+"currency.euro" = "Euro €";
+"currency.beer" = "🍻 beer";
+"currency.perignon" = "🍾 Pérignon";
+"currency.caviar" = "🐟 Caviar";
+"currency.iphone" = "📱 iPhone";
+"currency.dollar" = "Dollar 💲";
+
+//speed
+
+"speed.kmh" = "km/h";
+"speed.phelps" = "🏊‍♀️ Phelps";
+"speed.f1" = "🏎 f1 car";
+"speed.light" = "💡 speed";
+"speed.usain" = "🏃🏿 Usain Bolt";
+"speed.cheetah" = "🐅 cheetah";
+"speed.bullet" = "🔫 bullet";
+"speed.mph" = "mp/h";
+
+//metric
+
+"metric.metres" = "metres";
+"metric.kilometres" = "kilometres";
+"metric.baguette" = "🥖 baguettes";
+"metric.titanic" = "⛴ titanics";
+"metric.field" = "🏟 fields";
+"metric.decimetres" = "decimetres";
+"metric.centimetres" = "centimetres";
+"metric.milimetres" = "milimetres";
+"metric.inches" = "inches";
+"metric.feet" = "feet";
+"metric.chocobar" = "🍫 chocobar";
+
+//temperature
+
+"temperature.celsius" = "Celsius";
+"temperature.icecream" = "🍦 icecream";
+"temperature.jacuzzi" = "🛁 jacuzzi";
+"temperature.lava" = "🔥 lava";
+"temperature.sauna" = "🧖‍♀️ sauna";
+"temperature.farenheit" = "Farenheit";
+"temperature.sun" = "☀️ surface";
+
+//time
+
+"time.hours" = "hours";
+"time.minutes" = "minutes";
+"time.seconds" = "seconds";
+"time.heartbeat" = "💓 heartbeat";
+"time.pluto" = "🪐 pluto";
+"time.despacito" = "🎹 Despacito";
+"time.soccer" = "⚽️ game";
+
+//weight
+
+"weight.grams" = "grams";
+"weight.kilograms" = "kilograms";
+"weight.bee" = "🐝 bees";
+"weight.bigmac" = "🍔 Big Macs";
+"weight.cat" = "🐈 cats";
+"weight.lbs" = "lbs";
+"weight.bear" = "🐻‍❄️ polar bear";

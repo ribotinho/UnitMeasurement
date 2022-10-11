@@ -46,7 +46,7 @@ struct ConversionView: View {
             }
             .ignoresSafeArea(.keyboard, edges: .bottom)
         }
-        .navigationTitle(viewModel.unit.name)
+        .navigationTitle(viewModel.unit.title.localizedKey())
         .onAppear{
             viewModel.setup()
         }

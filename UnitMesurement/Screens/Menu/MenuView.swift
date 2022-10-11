@@ -20,7 +20,7 @@ struct MenuView: View {
                 
                 VStack {
                     HStack{
-                        Text("Unit conversion")
+                        Text("menu.title")
                             .font(.system(size: 35, weight: .bold, design: .rounded))
                         Spacer()
                     }
@@ -29,9 +29,9 @@ struct MenuView: View {
                     LazyVGrid(columns: columns, spacing: 30) {
                         ForEach(ConversionUnit.allCases, id: \.self) { item in
                             NavigationLink(destination: ConversionView(viewModel: ConversionViewModel(unit: item))) {
-                                MenuItemView(title: item.name)
+                                MenuItemView(title: item.title, imageName: item.imageName)
                             }
-                            .foregroundColor(.black)
+                            .foregroundColor(Colors.brandPrimary)
                         }
                     }
                     .padding(.horizontal)

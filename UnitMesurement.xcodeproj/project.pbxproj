@@ -22,6 +22,9 @@
 		5FA119A828E741C700E2F4FA /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA119A728E741C700E2F4FA /* MenuItemView.swift */; };
 		5FA119AE28E75D2A00E2F4FA /* ConversionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA119AD28E75D2A00E2F4FA /* ConversionView.swift */; };
 		5FA119B428E76D3800E2F4FA /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA119B328E76D3800E2F4FA /* DropDownView.swift */; };
+		5FC3691C28F5B1C700B086FF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC3691B28F5B1C700B086FF /* Constants.swift */; };
+		5FC3692528F5BE0E00B086FF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FC3692728F5BE0E00B086FF /* Localizable.strings */; };
+		5FC3692A28F5C04200B086FF /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC3692928F5C04200B086FF /* String+Ext.swift */; };
 		5FF19A4628F074C600E91938 /* ConversionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF19A4528F074C600E91938 /* ConversionViewModel.swift */; };
 		5FFF170628F187490061262D /* ConversionTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFF170528F187490061262D /* ConversionTextFieldView.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +46,10 @@
 		5FA119A728E741C700E2F4FA /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
 		5FA119AD28E75D2A00E2F4FA /* ConversionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionView.swift; sourceTree = "<group>"; };
 		5FA119B328E76D3800E2F4FA /* DropDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
+		5FC3691B28F5B1C700B086FF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5FC3692628F5BE0E00B086FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5FC3692828F5BE1A00B086FF /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5FC3692928F5C04200B086FF /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		5FF19A4528F074C600E91938 /* ConversionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewModel.swift; sourceTree = "<group>"; };
 		5FFF170528F187490061262D /* ConversionTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionTextFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,6 +69,9 @@
 			isa = PBXGroup;
 			children = (
 				5F573FBF28F0977900A3D04A /* Dictionarable.swift */,
+				5FC3691B28F5B1C700B086FF /* Constants.swift */,
+				5FC3692928F5C04200B086FF /* String+Ext.swift */,
+				5FC3692728F5BE0E00B086FF /* Localizable.strings */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -196,6 +206,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 5FA1198328E73F5100E2F4FA;
 			productRefGroup = 5FA1198D28E73F5100E2F4FA /* Products */;
@@ -213,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FA1199728E73F5300E2F4FA /* Preview Assets.xcassets in Resources */,
+				5FC3692528F5BE0E00B086FF /* Localizable.strings in Resources */,
 				5FA1199428E73F5300E2F4FA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,10 +239,12 @@
 				5F573FBB28F0914300A3D04A /* Time.swift in Sources */,
 				5F573FB328F090DF00A3D04A /* Currency.swift in Sources */,
 				5FF19A4628F074C600E91938 /* ConversionViewModel.swift in Sources */,
+				5FC3692A28F5C04200B086FF /* String+Ext.swift in Sources */,
 				5FA119AE28E75D2A00E2F4FA /* ConversionView.swift in Sources */,
 				5FFF170628F187490061262D /* ConversionTextFieldView.swift in Sources */,
 				5F573FB528F0910800A3D04A /* Speed.swift in Sources */,
 				5F573FC028F0977900A3D04A /* Dictionarable.swift in Sources */,
+				5FC3691C28F5B1C700B086FF /* Constants.swift in Sources */,
 				5FA119A228E73F8E00E2F4FA /* ConversionUnit.swift in Sources */,
 				5FA1199028E73F5100E2F4FA /* UnitMesurementApp.swift in Sources */,
 				5F573FBD28F0914F00A3D04A /* Weight.swift in Sources */,
@@ -244,11 +258,24 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		5FC3692728F5BE0E00B086FF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FC3692628F5BE0E00B086FF /* en */,
+				5FC3692828F5BE1A00B086FF /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		5FA1199828E73F5300E2F4FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -309,6 +336,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

@@ -20,24 +20,24 @@ enum Weight : Double, CaseIterable, Dictionarable{
         switch self{
             
         case .gram:
-            return "grams"
+            return "weight.grams"
         case .kilogram:
-            return "kilograms"
+            return "weight.kilograms"
         case .bee:
-            return "🐝 bees"
+            return "weight.bee"
         case .bigMac:
-            return "🍔 Big Macs"
+            return "weight.bigmac"
         case .cat:
-            return "🐈 cats"
+            return "weight.cat"
         case .lbs:
-            return "lbs"
+            return "weight.lbs"
         case .bear:
-            return "🐻‍❄️ polar bear"
+            return "weight.bear"
         }
     }
     
     static func isBase(name : String) -> Bool {
-        return name == "grams" || name == "kilograms" || name == "lbs"
+        return name == "weight.grams" || name == "weight.kilograms" || name == "weight.lbs"
     }
     
     static func toDictionary() -> [String : Double] {

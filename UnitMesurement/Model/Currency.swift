@@ -20,22 +20,22 @@ enum Currency : Double, CaseIterable, Dictionarable {
     var displayName : String {
         switch self{
         case .euro:
-            return "Euro €"
+            return "currency.euro"
         case .beer:
-            return "🍻 beer"
+            return "currency.beer"
         case .domPerignon:
-            return "🍾 Pérignon"
+            return "currency.perignon"
         case .caviar:
-            return "🐟 Caviar "
+            return "currency.caviar"
         case .iphone:
-            return "📱 iPhone "
+            return "currency.iphone"
         case .dolar:
-            return "Dollar 💲"
+            return "currency.dollar"
         }
     }
     
     static func isBase(name : String) -> Bool {
-        return name == "Euro €" || name == "Dollar 💲"
+        return name == "currency.euro" || name == "currency.dollar"
     }
     
     static func toDictionary() -> [String : Double] {

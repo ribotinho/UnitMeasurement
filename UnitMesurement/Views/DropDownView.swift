@@ -23,16 +23,16 @@ struct DropDownView: View {
             Color(.white)
                 .overlay(
                     RoundedRectangle(cornerRadius: 5)
-                        .stroke(Color.black, lineWidth: 1)
+                        .stroke(Colors.brandPrimary, lineWidth: 1)
                 )
             
-            Picker("Strength", selection: $selectedUnit) {
+            Picker("", selection: $selectedUnit) {
                 ForEach(dictionary.sorted(by: >), id: \.key) { key, value in
                     switch style {
                     case .base:
-                        if viewModel.unit.base(name: key) { Text("\(key)").tag(key) }
+                        if viewModel.unit.base(name: key) { Text(key.localizedKey()).tag(key) }
                     case .weird:
-                        if !viewModel.unit.base(name: key) { Text("\(key)").tag(key) }
+                        if !viewModel.unit.base(name: key) { Text(key.localizedKey()).tag(key) }
                     }
                     
                 }

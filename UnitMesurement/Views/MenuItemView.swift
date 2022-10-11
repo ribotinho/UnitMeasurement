@@ -10,6 +10,7 @@ import SwiftUI
 struct MenuItemView: View {
     
     var title : String
+    var imageName : String
     
     var body: some View {
         ZStack {
@@ -19,11 +20,11 @@ struct MenuItemView: View {
                 .shadow(radius: 5)
             
             VStack{
-                Image(title)
+                Image(imageName)
                     .resizable()
                     .scaledToFit()
                     .frame(height: 100)
-                Text(title)
+                Text(title.localizedKey())
                     .bold()
                     .font(.title)
                     .foregroundColor(.pink)
@@ -34,6 +35,6 @@ struct MenuItemView: View {
 
 struct MenuItemView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuItemView(title: "Weight")
+        MenuItemView(title: "unit.weight", imageName: "Weight")
     }
 }
