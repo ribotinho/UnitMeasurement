@@ -12,12 +12,12 @@ struct UI {
 }
 
 struct Images {
-    static let metric = "Metric"
-    static let currency = "Currency"
-    static let weight = "Weight"
-    static let speed = "Speed"
-    static let time = "Time"
-    static let temperature = "Temperature"
+    static let metric = "Menu_metric"
+    static let currency = "Menu_currency"
+    static let weight = "Menu_weight"
+    static let speed = "Menu_speed"
+    static let time = "Menu_time"
+    static let temperature = "Menu_temperature"
 }
 
 struct Colors {
