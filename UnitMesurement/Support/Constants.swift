@@ -21,6 +21,6 @@ struct Images {
 }
 
 struct Colors {
-    static let brandPrimary = Color.pink
+    static let brandPrimary = Color.orange
 }
 

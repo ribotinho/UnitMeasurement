@@ -23,7 +23,7 @@ struct DropDownView: View {
             Color(.white)
                 .overlay(
                     RoundedRectangle(cornerRadius: 5)
-                        .stroke(Colors.brandPrimary, lineWidth: 1)
+                        .stroke(Colors.brandPrimary, lineWidth: 2)
                 )
             
             Picker("", selection: $selectedUnit) {
