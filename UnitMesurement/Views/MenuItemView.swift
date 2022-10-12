@@ -27,6 +27,7 @@ struct MenuItemView: View {
                 Text(title.localizedKey())
                     .bold()
                     .font(.title)
+                    .lineLimit(1)
                     .foregroundColor(Colors.brandPrimary)
             }
         }

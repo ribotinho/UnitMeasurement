@@ -62,8 +62,6 @@ struct ConversionView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             ConversionView(viewModel: ConversionViewModel(unit: ConversionUnit.temperature))
-            ConversionView(viewModel: ConversionViewModel(unit: ConversionUnit.temperature))
-                .preferredColorScheme(.dark)
         }
     }
 }
