@@ -14,10 +14,10 @@ Candidate for the @MoureDev and @Rviewer [Challenge](https://go.rviewer.io/dev-u
 
 # Tech used
 
-MVVM pattern
-SwiftUI
-iOS 15.0
-Swift 5.7
-Xcode 14.0
-iPhone only supported
-Localized to Spanish and English
+- MVVM pattern
+- SwiftUI
+- iOS 15.0
+- Swift 5.7
+- Xcode 14.0
+- iPhone only supported
+- Localized in Spanish and English
